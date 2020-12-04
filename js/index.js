@@ -4,6 +4,7 @@ const question = document.getElementById('question');
 const writeQuestion = document.getElementById('writeQuestion');
 const postBtn = document.getElementById('postBtn');
 const feed = document.getElementById('feed');
+const promedio = document.getElementById('promedio')
 
 var vacio = false;
 
@@ -30,7 +31,6 @@ post = () => {
             
             database.ref('question/actual/').set(null);
             reference.set(objectQuestion);
-            //writeQuestion.value=' ';
           
         }
 
@@ -39,7 +39,7 @@ post = () => {
 
         //---------------objeto con pregunta actual----------
         let objectQuestionA = {
-            //questions: writeQuestion.value,
+
             questions: writeQuestion.value,
             
         }
@@ -75,6 +75,17 @@ database.ref('question/actual/').on('value', function (data) {
                 laPregunta = valor.questions
                 vacio = true;
             }
+        }
+    );
+});
+
+//-------------Lectura Puntaje del firebase----------------
+database.ref('question/actual/puntaje/').on('value', function (data) {
+    data.forEach (
+        puntaje => {
+            let valor2 = puntaje.val();
+            promedio.innerHTML = valor2;
+            console.log(valor2);
         }
     );
 });

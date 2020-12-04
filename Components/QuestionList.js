@@ -14,24 +14,24 @@ class QuestionList {
             this.objectQuestion.questions
         );
 
-
-        let prom = document.createElement('div');
+        //Contenedor de la pregunta
+        /*let prom = document.createElement('div');
         prom.className='elPuntaje'
         prom.innerHTML=(
             this.objectQuestion.promedio
-        );
+        );*/
         
         let deleteBtn = document.createElement('button');
         deleteBtn.className='deleteButton';
         deleteBtn.innerHTML='x';
 
-        component.appendChild(prom);
+       // component.appendChild(prom);
         component.appendChild(questionCont);
         component.appendChild(deleteBtn);
 
         deleteBtn.addEventListener('click', ()=> {
             const database = firebase.database();
-            database.ref('question/web/'+this.objectQuestion.id).set(null);
+            database.ref('question/historial/'+this.objectQuestion.id).set(null);
         });
         
      
