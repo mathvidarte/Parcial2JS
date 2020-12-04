@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Julimarketin</title>
+        <link rel = "stylesheet" href= "css/index.css">
+        <body>
+            <h1 id="header"> Julimarketing </h1>
+            <h3> Pregunta actual </h3>
+            <div id="question">
+
+            </div>
+
+            <p>Escriba aquí la pregunta actual del focus group</p>
+
+            <input id="writeQuestion" type="text" placeholder="Pregunta nueva"> 
+            <button id="postBtn"> Enviar </button>
+
+            <h3>Histórico </h3>
+
+            <div id="feed">
+              
+
+            </div>
+
+        </body>
+    </head>
+</html>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+
+
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBLJROVcyJdmQ4TqmbbqRGRssxcvKePRMc",
+    authDomain: "parcial2-4ff10.firebaseapp.com",
+    projectId: "parcial2-4ff10",
+    storageBucket: "parcial2-4ff10.appspot.com",
+    messagingSenderId: "295684436688",
+    appId: "1:295684436688:web:2834db9507b3999ec324d5",
+    measurementId: "G-RZ0W44LEG7"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  
+</script>
+<script src="Components/QuestionList.js"></script>
+<script src="js/index.js"></script>

@@ -1,0 +1,23 @@
+.questionList {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: rgb(213, 168, 255);
+    color: white;
+    width: 20em;
+    padding: 1.5em;
+    position: relative;
+}
+
+.elPuntaje {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: yellow;
+}
+
+.deleteButton{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: yellow;
+}
